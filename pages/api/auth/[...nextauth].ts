@@ -43,6 +43,20 @@ export default NextAuth({
       return url;
     },
     async session({ session, user, token }) {
+      console.log('session is ', session);
+      let userData = await prisma.user.findUnique({
+        where: { email: session.user.email },
+      });
+
+      if (userData?.onboardingDone == false) {
+        let newOrg = await prisma.organization.create({
+          data: { user: { connect: { id: userData.id } } },
+        });
+        let updatedUser = await prisma.user.update({
+          where: { id: userData.id },
+          data: { onboardingDone: true },
+        });
+      }
       return session;
     },
     async jwt({ token, user, account, profile, isNewUser }) {
