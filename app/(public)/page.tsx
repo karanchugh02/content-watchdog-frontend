@@ -1,4 +1,4 @@
-import HomeMain from '@/components/home';
+import HomeMain from '@/components/home/main/index';
 import React from 'react';
 
 function page() {
