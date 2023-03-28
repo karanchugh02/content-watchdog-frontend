@@ -1,6 +1,7 @@
 'use client';
-import '../styles/globals.css';
 import { SessionProvider } from 'next-auth/react';
+import { Toaster } from 'react-hot-toast';
+import '../../styles/globals.css';
 
 export default function RootLayout({
   children,
@@ -13,10 +14,9 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-
-      <head />
-      <body>
-        <SessionProvider>{children}</SessionProvider>
+      <body className="">
+        <Toaster />
+        <SessionProvider> {children}</SessionProvider>
       </body>
     </html>
   );

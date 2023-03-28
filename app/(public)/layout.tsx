@@ -1,5 +1,4 @@
 'use client';
-import { useSession } from 'next-auth/react';
 import { Toaster } from 'react-hot-toast';
 
 export default function RootLayout({
@@ -7,8 +6,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = useSession({ required: true });
-
   return (
     <html lang="en">
       {/*
@@ -17,6 +14,7 @@ export default function RootLayout({
       */}
       <body className="">
         <Toaster />
+        {children}
       </body>
     </html>
   );
