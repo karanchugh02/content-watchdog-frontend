@@ -1,7 +1,12 @@
+import HomeMain from '@/components/home';
 import React from 'react';
 
 function page() {
-  return <div>Home Main</div>;
+  return (
+    <>
+      <HomeMain />
+    </>
+  );
 }
 
 export default page;
