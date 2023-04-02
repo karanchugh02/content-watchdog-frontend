@@ -1,5 +1,6 @@
 'use client';
 import { Toaster } from 'react-hot-toast';
+import '../../styles/public.css';
 
 export default function RootLayout({
   children,

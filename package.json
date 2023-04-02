@@ -15,12 +15,10 @@
     "npm": "please-use-pnpm"
   },
   "dependencies": {
-    "@next-auth/prisma-adapter": "^1.0.4",
     "@prisma/client": "^4.7.1",
     "axios": "^0.27.2",
     "jsonwebtoken": "^9.0.0",
     "next": "latest",
-    "next-auth": "^4.10.3",
     "nodemailer": "^6.7.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",

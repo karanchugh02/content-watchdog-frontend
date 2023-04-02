@@ -1,10 +1,10 @@
 'use client';
-import ConsoleMain from '@/components/console';
+import PanelMain from '@/components/panel';
 
 export default function Console() {
   return (
     <>
-      <ConsoleMain />
+      <PanelMain />
     </>
   );
 }
