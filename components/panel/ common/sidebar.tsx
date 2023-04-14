@@ -25,7 +25,7 @@ export default function Sidebar() {
       </div>
       <div className="menu">
         <div>
-          <Sidebarbutton title="" />
+          <Sidebarbutton title="karan" />
         </div>
       </div>
     </div>

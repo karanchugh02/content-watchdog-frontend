@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { userAuthStore } from 'store/user';
 
 function Header() {
+  const user = userAuthStore((state) => state.user);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      setLoaded(true);
+    }
+  }, [user]);
   return (
     <div className="bg-lightblack sticky top-0 w-full border-b-2 border-grayborder flex flex-row justify-between px-8 py-3 items-center">
       <div className="left">
@@ -34,8 +43,9 @@ function Header() {
       </div>
 
       <div className="right">
-        <button>
-          <img className="h-10 w-10 rounded-full" />
+        <button className="flex flex-col text-white ">
+          <div>{loaded ? user?.name : 'name'}</div>
+          <div>{loaded ? user?.email : 'email'}</div>
         </button>
       </div>
     </div>
