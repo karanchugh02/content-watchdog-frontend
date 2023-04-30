@@ -25,7 +25,7 @@ function HomeMain() {
             </p>
           </div>
           <div className="text-center">
-            <p className="m-7">Types of requests</p>
+            <p className="m-7">Types of Servies</p>
             <br />
             <h3 className="m-1">C</h3>
           </div>
