@@ -1,4 +1,5 @@
 'use client';
+import NavBar from '@/components/home/common/navbar';
 import { Toaster } from 'react-hot-toast';
 import '../../styles/public.css';
 
@@ -15,6 +16,7 @@ export default function RootLayout({
       */}
       <body className="">
         <Toaster />
+        <NavBar />
         {children}
       </body>
     </html>

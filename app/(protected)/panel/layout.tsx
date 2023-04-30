@@ -9,7 +9,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  checkAuth();
+  // checkAuth();
   return (
     <div className="panel-main flex justify-around">
       <Sidebar />
