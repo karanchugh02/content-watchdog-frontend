@@ -5,10 +5,12 @@ import {
   updateSuccessToast,
 } from '@/utils/notification';
 import axios from 'axios';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { userAuthStore } from 'store/user';
+
 
 function Page() {
   const [formData, setFormData] = useState({
@@ -47,7 +49,7 @@ function Page() {
           href="#"
           className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
         >
-          <img
+          <Image
             className="w-8 h-8 mr-2"
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
             alt="logo"

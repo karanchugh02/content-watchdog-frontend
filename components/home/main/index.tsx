@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
+import Footer from '../common/footer';
+
 
 function HomeMain() {
   return (
@@ -30,6 +32,7 @@ function HomeMain() {
           </div>
         </div>
       </main>
+      <div><Footer/></div>
     </div>
   );
 }
