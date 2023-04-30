@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .title-word {
   animation: color-animation 3s forwards infinite;
   transition: color 0.3s ease-out;

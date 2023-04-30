@@ -2,7 +2,6 @@ import Head from 'next/head';
 import React from 'react';
 import Footer from '../common/footer';
 
-
 function HomeMain() {
   return (
     <div className="bg-gradient-to-r from-black to-gray-800">
@@ -32,7 +31,9 @@ function HomeMain() {
           </div>
         </div>
       </main>
-      <div><Footer/></div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
