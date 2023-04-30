@@ -18,7 +18,7 @@
 .title-word-2 {
   --color-1: #2d567167;
   --color-2: #383f48;
-  --color-3: #17494D;
+  --color-3: #17494d;
 }
 /* @keyframes color-animation {
   0%    {color: var(--color-1)}
@@ -30,20 +30,28 @@
   100%  {color: var(--color-1)}
 } */
 @keyframes color-animation {
-  0%    {color: var(--color-1)}
-  33%   {color: var(--color-2)}
-  66%   {color: var(--color-3)}
-  100%  {color: var(--color-1)}
+  0% {
+    color: var(--color-1);
+  }
+  33% {
+    color: var(--color-2);
+  }
+  66% {
+    color: var(--color-3);
+  }
+  100% {
+    color: var(--color-1);
+  }
 }
 .container {
   display: grid;
-  place-items: center;  
+  place-items: center;
   text-align: center;
-  height: 100vh
+  height: 100vh;
 }
 
 .title {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 8.5vw;
   text-transform: uppercase;
