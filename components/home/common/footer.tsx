@@ -53,7 +53,7 @@ function Footer() {
         </div>
       </div>
       <div className="flex flex-col w-full h-full justify-center items-center text-center  p-5 bg-black">
-        <h1 className=" text-gray-400 font-semibold text-center">
+        <h1 className=" text-gray-400 font-semibold text-2xl mb-2 text-center">
           Powered By :
         </h1>
         <ul className="text-xl flex space-x-3 ">
