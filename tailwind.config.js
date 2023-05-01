@@ -12,6 +12,7 @@ module.exports = {
         grayborder: '#2C2D33',
       },
     },
+    
   },
   plugins: [],
 };

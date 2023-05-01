@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from './logo';
 
 const CustomLink = ({
@@ -20,9 +20,35 @@ const CustomLink = ({
 };
 
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header className="bg-black w-full px-8 py-4 text-lg text-gray-400 	 font-medium flex items-center justify-between">
       <Logo />
+      <button
+        className=" flex-col justify-center items-center hidden lg:flex"
+        onClick={handleClick}
+      >
+        <span
+          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
+          }`}
+        ></span>
+        <span
+          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+            isOpen ? 'opacity-0' : 'opacity-100'
+          }`}
+        ></span>
+        <span
+          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+            isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
+          }`}
+        ></span>
+      </button>
+      
 
       <nav>
         <CustomLink
@@ -55,6 +81,7 @@ const NavBar = () => {
           className="font-bold px-2 py-4 rounded-full  border-2 border-white hover:border-black hover:bg-white hover:text-black"
         ></CustomLink>
       </nav>
+      
     </header>
   );
 };
