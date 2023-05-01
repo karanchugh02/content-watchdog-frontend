@@ -26,9 +26,9 @@ function HomeMain() {
           </div>
 
           {/* body */}
-          <div className="text-center absolute  top-96 left-0 right-0 m-auto">
+          <div className="text-center absolute  md:top-96  left-0 right-0 m-auto">
             <h1 className="m-7 py-10  text-2xl">Types of Services</h1>
-            <div className="flex max-w-5xl mx-auto gap-8">
+            <div className="flex flex-col md:flex-row md:max-w-5xl max-w-xl mx-auto gap-8">
               <div className="bg-white/10 p-8 rounded-xl mix-blend-luminosity">
                 <Image
                   src={'/assets/panel/logo.png'}
@@ -81,7 +81,7 @@ function HomeMain() {
           </div>
         </div>
       </main>
-      <div className='mt-28'>
+      <div className="nd:mt-28 mt-[50rem]">
         <Footer />
       </div>
     </div>
