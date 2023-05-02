@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+
 import Footer from '../common/footer';
 
 function HomeMain() {
