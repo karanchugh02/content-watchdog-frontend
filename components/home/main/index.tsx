@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 
 import Footer from '../common/footer';
-
+import Image from 'next/image';
 function HomeMain() {
   return (
     <div className="bg-gradient-to-r from-black to-gray-800">
@@ -20,19 +20,69 @@ function HomeMain() {
               WatchDog
             </span>
 
-            <p className="mt-4 text-xl underline">
+            <p className="mt-7 text-xl underline">
               Safeguard Your Content with Content Watchdog API - Keeping NSFW in
               Check!
             </p>
           </div>
-          <div className="text-center">
-            <p className="m-7">Types of Servies</p>
-            <br />
-            <h3 className="m-1">C</h3>
+
+          {/* body */}
+          <div className="text-center absolute  md:top-96  left-0 right-0 m-auto">
+            <h1 className="m-7 py-10  text-2xl">Types of Services</h1>
+            <div className="flex flex-col md:flex-row md:max-w-5xl max-w-xl mx-auto gap-8">
+              <div className="bg-white/10 p-8 rounded-xl mix-blend-luminosity">
+                <Image
+                  src={'/assets/panel/logo.png'}
+                  alt="Picture of the author"
+                  width={70}
+                  height={80}
+                  className={`mx-auto`}
+                />
+                <h4 className="uppercase text-4xl font-bold">Text</h4>
+                <p className="text-sm leading-7 my-3 font-light opacity-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+                </p>
+                <button className="bg-blue-500 py-w.5 px-8 rounded-full">
+                  Get Started
+                </button>
+              </div>
+              <div className="bg-white/10 p-8 rounded-xl mix-blend-luminosity">
+                <Image
+                  src={'/assets/panel/logo.png'}
+                  alt="Picture of the author"
+                  width={70}
+                  height={80}
+                  className={`mx-auto`}
+                />
+                <h4 className="uppercase text-4xl font-bold">Image</h4>
+                <p className="text-sm leading-7 my-3 font-light opacity-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+                </p>
+                <button className="bg-blue-500 py-w.5 px-8 rounded-full">
+                  Get Started
+                </button>
+              </div>
+              <div className="bg-white/10 p-8 rounded-xl mix-blend-luminosity">
+                <Image
+                  src={'/assets/panel/logo.png'}
+                  alt="Picture of the author"
+                  width={70}
+                  height={80}
+                  className={`mx-auto`}
+                />
+                <h4 className="uppercase text-4xl font-bold">Video</h4>
+                <p className="text-sm leading-7 my-3 font-light opacity-50">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+                </p>
+                <button className="bg-blue-500 py-w.5 px-8 rounded-full">
+                  Get Started
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </main>
-      <div>
+      <div className="mt-[50rem] md:mt-[8rem]">
         <Footer />
       </div>
     </div>
