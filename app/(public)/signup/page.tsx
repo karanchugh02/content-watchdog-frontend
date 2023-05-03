@@ -1,9 +1,6 @@
 'use client';
-import {
-  createToast,
-  updateErrorToast,
-  updateSuccessToast,
-} from '@/utils/notification';
+
+import Toast from '@/utils/notification';
 import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -19,7 +16,7 @@ function Page() {
   const router = useRouter();
 
   const submitHandler = async () => {
-    let toast = createToast('Signing up');
+    let toast = new Toast('Signing up');
     let response = await axios.post(
       `${process.env.NEXT_PUBLIC_BACKEND}/organization/signup`,
       formData
@@ -29,10 +26,10 @@ function Page() {
 
     console.log('data is ', data);
     if (data.status == true) {
-      updateSuccessToast(toast, 'Successfully Signed Up');
+      toast.success('Successfully Signed Up');
       router.replace('/login');
     } else {
-      updateErrorToast(toast, data.message);
+      toast.error(data.message);
       setFormData({ name: '', email: '', password: '' });
     }
     return;
