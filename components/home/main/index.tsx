@@ -84,7 +84,6 @@ function HomeMain() {
             </div>
           </div>
         </div>
-        
       </main>
       <div className="mt-[52rem] md:mt-[8rem]">
         <Footer />
