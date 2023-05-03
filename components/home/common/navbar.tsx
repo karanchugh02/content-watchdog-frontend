@@ -2,7 +2,11 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Logo from './logo';
-
+import { BiLogIn } from 'react-icons/bi';
+import { BiHome } from 'react-icons/bi';
+import { BiRupee } from 'react-icons/bi';
+import { BsPersonWorkspace } from 'react-icons/bs';
+import { MdOutlineContactSupport } from 'react-icons/md';
 const CustomLink = ({
   href,
   title,
@@ -21,41 +25,22 @@ const CustomLink = ({
 };
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+  // const [isOpen, setIsOpen] = useState(false);
+  // const handleClick = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   return (
     <header className="bg-black w-full px-8 py-4 text-lg text-gray-400 	 font-medium flex items-center justify-between">
       <Logo />
-      <button
-        className=" flex-col justify-center items-center hidden lg:flex"
-        onClick={handleClick}
-      >
-        <span
-          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-            isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
-          }`}
-        ></span>
-        <span
-          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
-            isOpen ? 'opacity-0' : 'opacity-100'
-          }`}
-        ></span>
-        <span
-          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-            isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
-          }`}
-        ></span>
-      </button>
 
-      <nav>
+      <nav className="md:block hidden">
         <CustomLink
           href="/"
           title="Home"
           className="mr-6 hover:text-white hover:text-xl"
         />
+
         <CustomLink
           href="/pricing"
           title="Pricing"
@@ -72,14 +57,30 @@ const NavBar = () => {
           className="mx-6 hover:text-white hover:text-xl"
         />
       </nav>
-
+      <nav className="md:hidden flex flex-row space-x-14 ">
+        <BiHome className="hover:text-white hover:scale-x-125" size={30} />
+        <BiRupee className="hover:text-white hover:scale-x-125" size={30} />
+        <BsPersonWorkspace
+          className="hover:text-white hover:scale-x-125"
+          size={30}
+        />
+        <MdOutlineContactSupport
+          className="hover:text-white hover:scale-x-125"
+          size={30}
+        />
+      </nav>
       <nav>
-        {' '}
+        {/* <CustomLink
+          href="/login"
+          title="Get Started"
+          className="font-bold px-2 py-4 rounded-full  border-2 border-white hover:border-black hover:bg-white hover:text-black md:block hidden"
+        ></CustomLink> */}
         <CustomLink
           href="/login"
           title="Get Started"
-          className="font-bold px-2 py-4 rounded-full  border-2 border-white hover:border-black hover:bg-white hover:text-black"
+          className=" hover:bg-white text-white hover:text-black font-bold py-2 px-4 border-2 border-white-700 rounded md:block hidden"
         ></CustomLink>
+        <BiLogIn size={35} className="block md:hidden " />
       </nav>
     </header>
   );
