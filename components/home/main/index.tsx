@@ -3,6 +3,7 @@ import React from 'react';
 
 import Footer from '../common/footer';
 import Image from 'next/image';
+
 function HomeMain() {
   return (
     <div className="bg-gradient-to-r from-black to-gray-800">
@@ -20,7 +21,7 @@ function HomeMain() {
               WatchDog
             </span>
 
-            <p className="mt-7 text-xl underline">
+            <p className="mt-8 text-xl underline">
               Safeguard Your Content with Content Watchdog API - Keeping NSFW in
               Check!
             </p>
@@ -28,7 +29,7 @@ function HomeMain() {
 
           {/* body */}
           <div className="text-center absolute  md:top-96  left-0 right-0 m-auto">
-            <h1 className="m-7 py-10  text-2xl">Types of Services</h1>
+            <h1 className="m-7 py-10  text-4xl">Types of Services</h1>
             <div className="flex flex-col md:flex-row md:max-w-5xl max-w-xl mx-auto gap-8">
               <div className="bg-white/10 p-8 rounded-xl mix-blend-luminosity md:hover:scale-110 transition-all duration-100 ease-out">
                 <Image
@@ -83,6 +84,7 @@ function HomeMain() {
             </div>
           </div>
         </div>
+        
       </main>
       <div className="mt-[52rem] md:mt-[8rem]">
         <Footer />

@@ -20,35 +20,15 @@ const CustomLink = ({
 };
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
+  // const [isOpen, setIsOpen] = useState(false);
+  // const handleClick = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   return (
     <header className="bg-black w-full px-8 py-4 text-lg text-gray-400 	 font-medium flex items-center justify-between">
       <Logo />
-      <button
-        className=" flex-col justify-center items-center hidden lg:flex"
-        onClick={handleClick}
-      >
-        <span
-          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-            isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
-          }`}
-        ></span>
-        <span
-          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
-            isOpen ? 'opacity-0' : 'opacity-100'
-          }`}
-        ></span>
-        <span
-          className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
-            isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
-          }`}
-        ></span>
-      </button>
-
+      
       <nav>
         <CustomLink
           href="/"
