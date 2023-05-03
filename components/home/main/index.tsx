@@ -40,7 +40,7 @@ function HomeMain() {
                 />
                 <h4 className="uppercase text-4xl font-bold">Text</h4>
                 <p className="text-sm leading-7 my-3 font-light opacity-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+                  For getting stared with text detection,start by pressing here.
                 </p>
                 <button className="bg-blue-500 py-2 px-8 rounded-full hover:bg-blue-600">
                   Get Started
@@ -56,7 +56,8 @@ function HomeMain() {
                 />
                 <h4 className="uppercase text-4xl font-bold">Image</h4>
                 <p className="text-sm leading-7 my-3 font-light opacity-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+                  For getting started with Image detection,start by pressing
+                  here.
                 </p>
                 <button className="bg-blue-500   rounded-full py-2 px-8 hover:bg-blue-600 ">
                   Get Started
@@ -72,7 +73,8 @@ function HomeMain() {
                 />
                 <h4 className="uppercase text-4xl font-bold">Video</h4>
                 <p className="text-sm leading-7 my-3 font-light opacity-50">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.{' '}
+                  For getting started with video detection, start by pressing
+                  here.
                 </p>
                 <button className="bg-blue-500 py-2 px-8 rounded-full hover:bg-blue-600">
                   Get Started
