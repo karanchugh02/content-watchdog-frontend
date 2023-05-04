@@ -33,8 +33,13 @@ function ApiInformation() {
         <div className="addButton min-w-[100px]"></div>
       </div>
 
-      <div>
-        <ApiInformationBox />
+      <div className="px-5 py-5">
+        <ApiInformationBox
+          method="POST"
+          code={`console.log(5)`}
+          title={'Send Request'}
+          url={'https://api.contentwatchdog.tech/service/image'}
+        />
       </div>
     </div>
   );
