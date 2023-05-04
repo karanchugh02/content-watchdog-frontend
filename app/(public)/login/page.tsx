@@ -1,9 +1,5 @@
 'use client';
-import {
-  createToast,
-  updateErrorToast,
-  updateSuccessToast,
-} from '@/utils/notification';
+import Toast from '@/utils/notification';
 import axios from 'axios';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -23,7 +19,7 @@ function Page() {
   const { setUser } = userAuthStore();
 
   const submitHandler = async () => {
-    let toast = createToast('Signing In');
+    let toast = new Toast('Signing In');
     let response = await axios.post(
       `${process.env.NEXT_PUBLIC_BACKEND}/organization/login`,
       formData
@@ -32,11 +28,11 @@ function Page() {
     let data = response.data;
 
     if (data.status == true) {
-      updateSuccessToast(toast, 'Successfully Login');
+      toast.success('Successfully Login');
       setUser(data.data);
       router.replace('/panel');
     } else {
-      updateErrorToast(toast, data.message);
+      toast.error(data.message);
       setFormData({ email: '', password: '' });
     }
     return;

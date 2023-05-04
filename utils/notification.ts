@@ -1,20 +1,23 @@
 import toast from 'react-hot-toast';
+class Toast {
+  private toastId: string;
+  constructor(message: string) {
+    this.toastId = toast.loading(message);
+    return;
+  }
+  public error(message: string) {
+    toast.error(message, {
+      id: this.toastId,
+    });
+    return;
+  }
 
-const createToast = (message: string) => {
-  let newToast = toast.loading(message);
-  return newToast;
-};
+  public success(message: string) {
+    toast.success(message, {
+      id: this.toastId,
+    });
+    return;
+  }
+}
 
-const updateSuccessToast = (id: string, message: string) => {
-  toast.success(message, {
-    id: id,
-  });
-};
-
-const updateErrorToast = (id: string, message: string) => {
-  toast.error(message, {
-    id: id,
-  });
-};
-
-export { createToast, updateErrorToast, updateSuccessToast };
+export default Toast;

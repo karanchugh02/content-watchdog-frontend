@@ -16,7 +16,6 @@ export default function RootLayout({
       */}
       <body className="">
         <Toaster />
-        <NavBar />
         {children}
       </body>
     </html>

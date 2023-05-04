@@ -1,7 +1,7 @@
 import React from 'react';
 
 function PanelMain() {
-  return <div className="text-white">duisakhduashdiuash</div>;
+  return <div>main</div>;
 }
 
 export default PanelMain;
