@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Logo from './logo';
-import {BiLogIn} from 'react-icons/bi'
-import {BiHome} from 'react-icons/bi'
-import {BiRupee} from 'react-icons/bi'
-import {BsPersonWorkspace} from 'react-icons/bs'
-import {MdOutlineContactSupport} from 'react-icons/md'
+import { BiLogIn } from 'react-icons/bi';
+import { BiHome } from 'react-icons/bi';
+import { BiRupee } from 'react-icons/bi';
+import { BsPersonWorkspace } from 'react-icons/bs';
+import { MdOutlineContactSupport } from 'react-icons/md';
+import { AiOutlineUser } from 'react-icons/ai';
 const CustomLink = ({
   href,
   title,
@@ -33,13 +34,13 @@ const NavBar = () => {
     <header className="bg-black w-full px-8 py-4 text-lg text-gray-400 	 font-medium flex items-center justify-between">
       <Logo />
 
-      <nav className='md:block hidden'>
+      <nav className="md:block hidden">
         <CustomLink
           href="/"
           title="Home"
           className="mr-6 hover:text-white hover:text-xl"
         />
-        
+
         <CustomLink
           href="/pricing"
           title="Pricing"
@@ -56,14 +57,28 @@ const NavBar = () => {
           className="mx-6 hover:text-white hover:text-xl"
         />
       </nav>
-      <nav className='md:hidden flex flex-row space-x-14 '>
-        <BiHome className='hover:text-white hover:scale-x-125' size={30}/>
-        <BiRupee className='hover:text-white hover:scale-x-125' size={30}/>
-        <BsPersonWorkspace className='hover:text-white hover:scale-x-125' size={30}/>
-        <MdOutlineContactSupport className='hover:text-white hover:scale-x-125' size={30}/>
+      <nav className="md:hidden flex flex-row space-x-14 ">
+        <Link href="/">
+          <BiHome className="hover:text-white hover:scale-110" size={30} />
+        </Link>
+        <Link href="#">
+          <BiRupee className="hover:text-white hover:scale-110" size={30} />
+        </Link>
+        <Link href="#">
+          {' '}
+          <BsPersonWorkspace
+            className="hover:text-white hover:scale-110"
+            size={30}
+          />
+        </Link>
+        <Link href="/login">
+          <MdOutlineContactSupport
+            className="hover:text-white hover:scale-110"
+            size={30}
+          />
+        </Link>
       </nav>
       <nav>
-        
         {/* <CustomLink
           href="/login"
           title="Get Started"
@@ -72,9 +87,14 @@ const NavBar = () => {
         <CustomLink
           href="/login"
           title="Get Started"
-          className=' hover:bg-white text-white hover:text-black font-bold py-2 px-4 border-2 border-white-700 rounded md:block hidden'
+          className=" hover:bg-white text-white hover:text-black font-bold py-2 px-4 border-2 border-white-700 rounded md:block hidden"
         ></CustomLink>
-        <BiLogIn size={35} className='block md:hidden '/>
+        <Link href="/login">
+          <AiOutlineUser
+            size={30}
+            className="block hover: md:hidden hover:text-white hover:scale-110"
+          />
+        </Link>
       </nav>
     </header>
   );
