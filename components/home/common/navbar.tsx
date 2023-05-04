@@ -2,11 +2,11 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
 import Logo from './logo';
-import {BiLogIn} from 'react-icons/bi'
-import {BiHome} from 'react-icons/bi'
-import {BiRupee} from 'react-icons/bi'
-import {BsPersonWorkspace} from 'react-icons/bs'
-import {MdOutlineContactSupport} from 'react-icons/md'
+import { BiLogIn } from 'react-icons/bi';
+import { BiHome } from 'react-icons/bi';
+import { BiRupee } from 'react-icons/bi';
+import { BsPersonWorkspace } from 'react-icons/bs';
+import { MdOutlineContactSupport } from 'react-icons/md';
 const CustomLink = ({
   href,
   title,
@@ -57,11 +57,17 @@ const NavBar = () => {
           className="mx-6 hover:text-white hover:text-xl"
         />
       </nav>
-      <nav className='md:hidden flex flex-row space-x-14 '>
-        <BiHome className='hover:text-white hover:scale-x-125' size={30}/>
-        <BiRupee className='hover:text-white hover:scale-x-125' size={30}/>
-        <BsPersonWorkspace className='hover:text-white hover:scale-x-125' size={30}/>
-        <MdOutlineContactSupport className='hover:text-white hover:scale-x-125' size={30}/>
+      <nav className="md:hidden flex flex-row space-x-14 ">
+        <BiHome className="hover:text-white hover:scale-x-125" size={30} />
+        <BiRupee className="hover:text-white hover:scale-x-125" size={30} />
+        <BsPersonWorkspace
+          className="hover:text-white hover:scale-x-125"
+          size={30}
+        />
+        <MdOutlineContactSupport
+          className="hover:text-white hover:scale-x-125"
+          size={30}
+        />
       </nav>
       <nav>
         {/* <CustomLink
@@ -74,7 +80,7 @@ const NavBar = () => {
           title="Get Started"
           className=" hover:bg-white text-white hover:text-black font-bold py-2 px-4 border-2 border-white-700 rounded md:block hidden"
         ></CustomLink>
-        <BiLogIn size={35} className='block md:hidden '/>
+        <BiLogIn size={35} className="block md:hidden " />
       </nav>
     </header>
   );
