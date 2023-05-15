@@ -46,11 +46,11 @@ const NavBar = () => {
           title="Pricing"
           className="mx-6 hover:text-white hover:text-xl"
         />
-        <CustomLink
+        {/* <CustomLink
           href="/demo"
           title="Demo"
           className="mx-6 hover:text-white hover:text-xl"
-        />
+        /> */}
         <CustomLink
           href="/contactus"
           title="Contact"
@@ -60,10 +60,10 @@ const NavBar = () => {
       <nav className="md:hidden flex flex-row space-x-14 ">
         <BiHome className="hover:text-white hover:scale-x-125" size={30} />
         <BiRupee className="hover:text-white hover:scale-x-125" size={30} />
-        <BsPersonWorkspace
+        {/* <BsPersonWorkspace
           className="hover:text-white hover:scale-x-125"
           size={30}
-        />
+        /> */}
         <MdOutlineContactSupport
           className="hover:text-white hover:scale-x-125"
           size={30}
