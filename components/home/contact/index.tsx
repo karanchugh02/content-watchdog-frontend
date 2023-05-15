@@ -1,10 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 const index = () => {
-
   return (
     <>
-    <style>
+      <style>
         {`@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
@@ -150,37 +149,58 @@ button:focus {
 }
 
 `}
-    </style>
-    <section className="contact-us" id="contact-section">
-      <form id="contact" action="" method="post">
-        <div className="section-heading">
-          <h4>Contact us</h4>
-        </div>
+      </style>
+      <section className="contact-us" id="contact-section">
+        <form id="contact" action="" method="post">
+          <div className="section-heading">
+            <h4>Contact us</h4>
+          </div>
 
-        <div className="inputField">
-          <input type="text" name="name" id="name" placeholder="Your name" autoComplete="on" required />
-          <span className="valid_info_name"></span>
-        </div>
+          <div className="inputField">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your name"
+              autoComplete="on"
+              required
+            />
+            <span className="valid_info_name"></span>
+          </div>
 
-        <div className="inputField">
-          <input type="email" name="email" id="email" placeholder="Your email" required />
-          <span className="valid_info_email"></span>
-        </div>
+          <div className="inputField">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              required
+            />
+            <span className="valid_info_email"></span>
+          </div>
 
-        <div className="inputField">
-          <textarea name="message" id="message" placeholder="Your message"></textarea>
-          <span className="valid_info_message"></span>
-        </div>
+          <div className="inputField">
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your message"
+            ></textarea>
+            <span className="valid_info_message"></span>
+          </div>
 
-        <div className="inputField btn">
-          <button type="submit" id="form-submit" className="main-gradient-button" >
-            Send a message
-          </button>
-        </div>
-      </form>
-    </section>
+          <div className="inputField btn">
+            <button
+              type="submit"
+              id="form-submit"
+              className="main-gradient-button"
+            >
+              Send a message
+            </button>
+          </div>
+        </form>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default index
+export default index;
