@@ -1,15 +1,10 @@
-import React from 'react';
+import React from 'react'
 
 const index = () => {
-  function showAlert() {
-    var myText = 'This can be whatever text you like!';
-    alert(myText);
-  }
-  //   element.addEventListener("click", myFunction);
 
   return (
     <>
-      <style>
+    <style>
         {`@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
@@ -24,7 +19,7 @@ figure, header, nav, section, article, aside, footer, figcaption, button {
 
 .html, body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #2b2a2a;
+  background-color: #1b1c1b;
 }
 
 section {
@@ -53,7 +48,7 @@ section.contact-us .section-heading {
 
 .section-heading h4 {
   line-height: 40px;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 900;
   color: black;
   text-align: center;
@@ -124,8 +119,8 @@ textarea {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff;
-  background:black;
- 
+  background: rgb(219,138,222);
+  background: black ;
   padding: 12px 20px;
   border-radius: 5px;
   border: none;
@@ -135,6 +130,14 @@ textarea {
   transition: all .3s;
 }
 
+#form-submit:disabled {
+  border: 1px solid #9e9e9e;
+  background: transparent;
+  color: #9e9e9e;
+  transition: none;
+  transform: none;
+  cursor: default;
+}
 
 
 
@@ -147,58 +150,37 @@ button:focus {
 }
 
 `}
-      </style>
-      <section className="contact-us " id="contact-section">
-        <form id="contact" action="" method="post">
-          <div className="section-heading">
-            <h4>Contact us</h4>
-          </div>
+    </style>
+    <section className="contact-us" id="contact-section">
+      <form id="contact" action="" method="post">
+        <div className="section-heading">
+          <h4>Contact us</h4>
+        </div>
 
-          <div className="inputField">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Your name"
-              autoComplete="on"
-              required
-            />
-            <span className="valid_info_name"></span>
-          </div>
+        <div className="inputField">
+          <input type="text" name="name" id="name" placeholder="Your name" autoComplete="on" required />
+          <span className="valid_info_name"></span>
+        </div>
 
-          <div className="inputField">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Your email"
-              required
-            />
-            <span className="valid_info_email"></span>
-          </div>
+        <div className="inputField">
+          <input type="email" name="email" id="email" placeholder="Your email" required />
+          <span className="valid_info_email"></span>
+        </div>
 
-          <div className="inputField">
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Your message"
-            ></textarea>
-            <span className="valid_info_message"></span>
-          </div>
+        <div className="inputField">
+          <textarea name="message" id="message" placeholder="Your message"></textarea>
+          <span className="valid_info_message"></span>
+        </div>
 
-          <div className="inputField btn">
-            <button
-              type="submit"
-              id="form-submit"
-              className="main-gradient-button"
-            >
-              Send a message
-            </button>
-          </div>
-        </form>
-      </section>
+        <div className="inputField btn">
+          <button type="submit" id="form-submit" className="main-gradient-button" >
+            Send a message
+          </button>
+        </div>
+      </form>
+    </section>
     </>
-  );
-};
+  )
+}
 
-export default index;
+export default index

@@ -52,7 +52,7 @@ const NavBar = () => {
           className="mx-6 hover:text-white hover:text-xl"
         /> */}
         <CustomLink
-          href="/contactus"
+          href="/contact"
           title="Contact"
           className="mx-6 hover:text-white hover:text-xl"
         />
