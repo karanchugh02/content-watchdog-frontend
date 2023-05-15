@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Calculator: React.FC = () => {
   const [textAmount, setTextAmount] = useState<number>(0);
@@ -7,20 +7,26 @@ const Calculator: React.FC = () => {
 
   const totalAmount = textAmount + imageAmount + videoAmount;
 
-  const textAmountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const textAmountInputHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setTextAmount(Number(event.target.value) * 1.5);
   };
 
-  const imageAmountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const imageAmountInputHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setImageAmount(Number(event.target.value) * 2);
   };
 
-  const videoAmountInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const videoAmountInputHandler = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setVideoAmount(Number(event.target.value) * 3);
   };
 
   if (textAmount < 0 || imageAmount < 0 || videoAmount < 0) {
-    alert("Please enter a valid amount");
+    alert('Please enter a valid amount');
     setTextAmount(0);
     setImageAmount(0);
     setVideoAmount(0);
@@ -28,9 +34,9 @@ const Calculator: React.FC = () => {
 
   const validateAmount = () => {
     if (textAmount + videoAmount + imageAmount < 100) {
-      alert("Total Amount should be more than 100");
+      alert('Total Amount should be more than 100');
     } else {
-      alert("You are good to pay");
+      alert('You are good to pay');
     }
   };
 
@@ -40,7 +46,7 @@ const Calculator: React.FC = () => {
         <h3 className="text-gray-900">
           Text requests :
           <span>
-            {" "}
+            {' '}
             <input
               className="text-gray-900"
               onChange={textAmountInputHandler}
@@ -55,7 +61,7 @@ const Calculator: React.FC = () => {
         <br />
         <div>
           <h3 className="text-gray-900">
-            Image requests :{" "}
+            Image requests :{' '}
             <span>
               <input
                 className="text-gray-950"
@@ -64,14 +70,14 @@ const Calculator: React.FC = () => {
                 placeholder="No of requests"
                 min="0"
               />
-            </span>{" "}
-            <span>*2</span>{" "}
+            </span>{' '}
+            <span>*2</span>{' '}
           </h3>
           <br />
         </div>
         <div>
           <h3 className="text-gray-900">
-            Video requests :{" "}
+            Video requests :{' '}
             <span>
               <input
                 className="text-gray-950"
@@ -80,7 +86,7 @@ const Calculator: React.FC = () => {
                 placeholder="No of requests"
                 min="0"
               />
-            </span>{" "}
+            </span>{' '}
             <span>*3</span>
           </h3>
           <br />

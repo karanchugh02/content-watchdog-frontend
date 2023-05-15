@@ -8,11 +8,10 @@ import React, { useState } from 'react';
 import ContactForm from '@/components/home/contact';
 
 function Page() {
-  
   return (
     <>
-	<ContactForm/>
-	</>
+      <ContactForm />
+    </>
   );
 }
 

@@ -5,8 +5,7 @@ const index = () => {
     var myText = 'This can be whatever text you like!';
     alert(myText);
   }
-//   element.addEventListener("click", myFunction);
-
+  //   element.addEventListener("click", myFunction);
 
   return (
     <>
