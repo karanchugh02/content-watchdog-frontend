@@ -1,12 +1,24 @@
 import { HomeOutlined } from '@ant-design/icons';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Sidebarbutton from './sidebarbutton';
 import { AiOutlineHome, AiFillHome } from 'react-icons/ai';
 import { BsCurrencyRupee } from 'react-icons/bs';
 import { TbDeviceAnalytics } from 'react-icons/tb';
 import { MdDeveloperMode } from 'react-icons/md';
 import { BiLogOut } from 'react-icons/bi';
+import { userAuthStore } from 'store/user';
+import { usePathname, useRouter } from 'next/navigation';
+import TopBarProgress from 'react-topbar-progress-indicator';
+
+TopBarProgress.config({
+  barColors: {
+    '0': '#000',
+    '1.0': '#000011',
+  },
+  shadowBlur: 5,
+});
+
 export default function Sidebar() {
   const [selected, setSelected] = useState<{
     title: string;
@@ -17,6 +29,17 @@ export default function Sidebar() {
     isSelected: true,
     link: '/panel',
   });
+
+  const { removeUser } = userAuthStore();
+  const router = useRouter();
+  const [showTopBar, setShowTopBar] = useState<boolean>(true);
+  const pathname = usePathname();
+  useEffect(() => {
+    setShowTopBar(true);
+    setTimeout(() => {
+      setShowTopBar(false);
+    }, 100);
+  }, [pathname]);
 
   return (
     <div className="bg-black sticky top-0 shadow-black  h-screen w-[15%] flex flex-col items-center ">
@@ -92,6 +115,7 @@ export default function Sidebar() {
           icon={<MdDeveloperMode />}
         />
       </div>
+      {showTopBar && <TopBarProgress />}
 
       <div className="logout mt-[90%]">
         <button className="relative inline-block px-4 py-2 w-[130px] font-medium group">
@@ -102,7 +126,15 @@ export default function Sidebar() {
               <div className="icon">
                 <BiLogOut />
               </div>
-              <div className="text">Logout</div>
+              <div
+                className="text"
+                onClick={() => {
+                  removeUser();
+                  router.replace('/login');
+                }}
+              >
+                Logout
+              </div>
             </div>
           </span>
         </button>

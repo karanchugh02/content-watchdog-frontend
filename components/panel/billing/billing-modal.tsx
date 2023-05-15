@@ -5,7 +5,7 @@ type Props = { submitHandler: Function; closeModal: Function };
 function BillingModal({ submitHandler, closeModal }: Props) {
   const [credits, setCredits] = useState(0);
   return (
-    <div className="absolute left-0 z-40  h-[50%] w-[100%]  flex justify-center items-center">
+    <div className="absolute left-0 z-50  h-[50%] w-[100%]  flex justify-center items-center">
       <div
         id="normalpayalert"
         className="z-50  text-black w-full h-full  bg-gray-900 bg-opacity-80 top-0 fixed sticky-0"
