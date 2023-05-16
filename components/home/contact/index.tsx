@@ -1,10 +1,32 @@
-import React from 'react';
+import { Axios } from 'axios';
+
+import React, { useState } from 'react';
 
 const index = () => {
+          
+        
+      
+        const submit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
+          event.preventDefault();
+          alert('Your response has been submitted');
+      
+          
+        };
+
+  //   const handle(e){
+  //     const newdata={...data}
+  //     newdata[e.target.id]=e.target.value
+  //     setData(newdata)
+  //     console.log(newdata)
+  //   }
+  interface MyEvent extends React.ChangeEvent<HTMLInputElement> {
+    // Add any additional custom event properties if needed
+  }
+  
   return (
     <>
       <style>
-        {`@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+        {`
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -151,7 +173,7 @@ button:focus {
 `}
       </style>
       <section className="contact-us" id="contact-section">
-        <form id="contact" action="" method="post">
+        <form id="contact" action="" method="post" onSubmit={submit}>
           <div className="section-heading">
             <h4>Contact us</h4>
           </div>
@@ -160,10 +182,11 @@ button:focus {
             <input
               type="text"
               name="name"
-              id="name"
-              placeholder="Your name"
+              id="Name"
+              placeholder="Your Name"
               autoComplete="on"
               required
+              
             />
             <span className="valid_info_name"></span>
           </div>
@@ -172,9 +195,10 @@ button:focus {
             <input
               type="email"
               name="email"
-              id="email"
-              placeholder="Your email"
+              id="Email"
+              placeholder="Your Email"
               required
+              
             />
             <span className="valid_info_email"></span>
           </div>
@@ -182,8 +206,9 @@ button:focus {
           <div className="inputField">
             <textarea
               name="message"
-              id="message"
-              placeholder="Your message"
+              id="Message"
+              placeholder="Message"
+              
             ></textarea>
             <span className="valid_info_message"></span>
           </div>

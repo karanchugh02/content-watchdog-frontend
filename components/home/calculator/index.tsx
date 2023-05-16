@@ -41,64 +41,63 @@ const Calculator: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-cover bg-blur-lg bg-center bg-gray-300">
-      <div className="text-center">
-        <h3 className="text-gray-900">
+    <div className="flex justify-center items-center h-screen bg-cover bg-blur-lg bg-center bg-black text-white ">
+      <div className="text-center border-2 border-white p-20">
+        <h3 className="text-xl mb-4 flex justify-around">
           Text requests :
           <span>
-            {' '}
             <input
-              className="text-gray-900"
               onChange={textAmountInputHandler}
               type="number"
               placeholder="No of requests"
               min="0"
+              className='text-black'
             />
-          </span>
           <span>*1.5</span>
+          </span>
         </h3>
 
         <br />
         <div>
-          <h3 className="text-gray-900">
-            Image requests :{' '}
+          <h3 className="text-xl mb-4 flex justify-around">
+            <span>Image requests : </span>
             <span>
               <input
-                className="text-gray-950"
                 onChange={imageAmountInputHandler}
                 type="number"
                 placeholder="No of requests"
                 min="0"
+                className='text-black'
               />
-            </span>{' '}
             <span>*2</span>{' '}
+            </span>{' '}
           </h3>
           <br />
         </div>
         <div>
-          <h3 className="text-gray-900">
-            Video requests :{' '}
+          <h3 className="text-xl flex justify-around">
+            <span>Video requests : </span>
             <span>
               <input
-                className="text-gray-950"
                 onChange={videoAmountInputHandler}
                 type="number"
                 placeholder="No of requests"
                 min="0"
+                className='text-black'
               />
-            </span>{' '}
             <span>*3</span>
+            </span>{' '}
           </h3>
           <br />
         </div>
-        <div className="text-center">
-          <strong className="text-gray-900">
+        <div className="text-center my-2">
+          <strong className="text-2xl">
             Total Amount : INR {textAmount + videoAmount + imageAmount}
           </strong>
           <br />
           <button
             onClick={validateAmount}
-            className=" m-5 border-2 border-white hover:border-black hover:bg-white hover:text-black font-bold px-2 py-2 rounded-full "
+            className=" my-4 py-2 px-4 text-2xl border-2 border-white hover:border-black hover:bg-white hover:text-black font-bold rounded-full "
           >
             Checkout
           </button>

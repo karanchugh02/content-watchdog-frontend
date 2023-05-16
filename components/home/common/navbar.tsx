@@ -57,7 +57,7 @@ const NavBar = () => {
           className="mx-6 hover:text-white hover:text-xl"
         />
       </nav>
-      <nav className="md:hidden flex flex-row space-x-14 ">
+      <nav className="md:hidden flex flex-row space-x-16 ">
         <BiHome className="hover:text-white hover:scale-x-125" size={30} />
         <BiRupee className="hover:text-white hover:scale-x-125" size={30} />
         {/* <BsPersonWorkspace
